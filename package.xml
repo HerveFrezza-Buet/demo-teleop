@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+  <name>demo_teleop</name>
+  <version>0.0.0</version>
+  <description>The demo-teleop package</description>
+  <maintainer email="herve.frezza-buet@centralesupelec.fr">Herve Frezza-Buet</maintainer>
+
+  <license>GPLv3</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+
+  <run_depend>rospy</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+
+  <export>
+  </export>
+</package>
