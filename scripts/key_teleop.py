@@ -19,11 +19,11 @@ def main(stdscr, persist):
     stdscr.addstr(" - e/r        : control angular z\n")
     stdscr.addstr(" - any key    : reset of the twist\n")
     stdscr.addstr(" - ESC        : reset twist and exit\n")
-    # We will wait for 100 ms for a key to be pressed
+    # We set the "wait for a key press" period to 100 ms. 
     if(persist): stdscr.timeout(100)
     while (not rospy.is_shutdown()) and (keycode != 27): # 27 is escape
-        keycode = stdscr.getch() # read pressed key
-        if keycode == -1                 : pass # No key has been pressed
+        keycode = stdscr.getch()         # Wait for a key press for at most 100ms
+        if   keycode == -1               : pass # No key has been pressed, we keep current twist.
         elif keycode == curses.KEY_UP    : twist.linear.x  = twist.linear.x  + .1
         elif keycode == curses.KEY_DOWN  : twist.linear.x  = twist.linear.x  - .1
         elif keycode == curses.KEY_LEFT  : twist.linear.y  = twist.linear.y  + .1
