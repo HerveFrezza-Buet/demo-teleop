@@ -7,5 +7,5 @@ find_package(catkin REQUIRED COMPONENTS
 )
 catkin_package()
 
-install(PROGRAMS scripts/key_teleop.py
+install(PROGRAMS scripts/key_teleop.py scripts/safe_drone_teleop.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})

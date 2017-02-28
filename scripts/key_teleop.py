@@ -14,9 +14,9 @@ def main(stdscr, persist):
     twist = Twist()
     keycode = -1
     stdscr.addstr("Command\n")
-    stdscr.addstr(" - UP/DOWN    : control linear x\n")
-    stdscr.addstr(" - LEFT/RIGHT : control linear y\n")
-    stdscr.addstr(" - e/r        : control angular z\n")
+    stdscr.addstr(" - UP/DOWN    : control linear x  (+= or -=)\n")
+    stdscr.addstr(" - LEFT/RIGHT : control linear y  (+= or -=)\n")
+    stdscr.addstr(" - e/r        : control angular z (+= or -=)\n")
     stdscr.addstr(" - any key    : reset of the twist\n")
     stdscr.addstr(" - ESC        : reset twist and exit\n")
     # We set the "wait for a key press" period to 100 ms. 
