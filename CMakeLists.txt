@@ -4,7 +4,14 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   geometry_msgs
+  dynamic_reconfigure
 )
+
+generate_dynamic_reconfigure_options(
+  cfg/SafeDroneTeleop.cfg
+)
+
+
 catkin_package()
 
 install(PROGRAMS scripts/key_teleop.py scripts/safe_drone_teleop.py
