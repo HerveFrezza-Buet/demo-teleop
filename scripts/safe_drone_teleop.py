@@ -97,6 +97,10 @@ class Status:
         
 
 def main(stdscr):
+    xlevel  = 0
+    ylevel  = 0
+    zlevel  = 0
+    alevel  = 0
     rospy.init_node('safe_drone_teleop', anonymous=True)
     log_pub = rospy.Publisher ('log', String, queue_size=1)
     rate = rospy.Rate(10) 
